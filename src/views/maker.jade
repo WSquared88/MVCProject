@@ -1,0 +1,40 @@
+extends ./base.jade
+block append style
+    link(rel="stylesheet", type="text/css", href="/assets/style.css")
+block body
+  nav
+    a(href="/login")
+      img#logo(src="/assets/img/face.png", alt="face logo")
+    .navlink
+      a(href="/logout") Log out
+    .navlink
+      a(href="/view") My Miis
+    .navlink
+      a(href="/viewAll") Miiverse
+  section#makeMii
+    form#MiiForm(class="MiiForm", name="MiiForm", action="/maker", method="POST")
+      label(for="name") Name: 
+      input#miiName(type="text", name="name", placeholder="Mii Name")
+      label(for="age") Age: 
+      input#miiAge(type="text", name="age", placeholder="Mii Age")
+      label(for="Color") Color:
+      input#miiColor(type="text", name="color", placeholder="Mii Color")
+      input(type="hidden", name="_csrf", value="#{csrfToken}")
+      a#makeMiiSubmit(class="makeMiiSubmit", href="#") Make Mii
+  section#miis
+    if !miis || miis.length == 0
+        div.mii
+            h3.emptyMii No Miis yet
+    else
+        each val in miis
+            div(style={background: val.color}).mii
+                img(class="miiFace", src="/assets/img/miiface.jpeg", alt="mii face")
+                h3.miiName Name: #{val.name}
+                h3.miiAge Age: #{val.age}
+  #miiMessage
+    img#speech(src="/assets/img/speech.png", alt="speech box")
+    h3
+      span#errorMessage
+    img#mii(src="assets/img/mii.png", alt="mii")
+block scripts
+        script(src="/assets/maker.js")

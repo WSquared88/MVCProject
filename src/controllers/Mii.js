@@ -33,8 +33,6 @@ var makeMii = function(req, res)
 		});
 	}
 	
-	console.log("Making the Mii");
-	
 	var miiData = 
 	{
 		name: req.body.name,
@@ -58,7 +56,7 @@ var makeMii = function(req, res)
 		
 		res.json(
 		{
-			redirect: "/maker"
+			redirect: "/view"
 		});
 	});
 };

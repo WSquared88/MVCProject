@@ -46,7 +46,7 @@ var login = function(req, res)
 		
 		res.json(
 		{
-			redirect: "/maker"
+			redirect: "/view"
 		});
 	});
 };
@@ -95,7 +95,7 @@ var signup = function(req, res)
 			
 			res.json(
 			{
-				redirect: "/maker"
+				redirect: "/view"
 			});
 		});
 	});

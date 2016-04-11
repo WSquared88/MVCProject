@@ -30,8 +30,6 @@ $(document).ready(function() {
     $("#makeMiiSubmit").on("click", function(e) {
         e.preventDefault();
 		
-		console.log("ajax call");
-		
         $("#miiMessage").animate({width:'hide'},350);
     
         if($("#miiName").val() == '' || $("#miiAge").val() == '' || $("#miiColor").val() == "") {

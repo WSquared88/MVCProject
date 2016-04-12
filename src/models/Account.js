@@ -6,7 +6,8 @@ var iterations = 10000;
 var saltLength = 64;
 var keyLength = 64;
 
-var AccountSchema = new mongoose.Schema({
+var AccountSchema = new mongoose.Schema(
+{
     username: {
         type: String,
         required: true,
@@ -32,7 +33,8 @@ var AccountSchema = new mongoose.Schema({
 
 });
 
-AccountSchema.methods.toAPI = function() {
+AccountSchema.methods.toAPI = function() 
+{
     //_id is built into your mongo document and is guaranteed to be unique
     return {
         username: this.username,
@@ -40,36 +42,45 @@ AccountSchema.methods.toAPI = function() {
     };
 };
 
-AccountSchema.methods.validatePassword = function(password, callback) {
+AccountSchema.methods.validatePassword = function(password, callback) 
+{
 	var pass = this.password;
 	
-	crypto.pbkdf2(password, this.salt, iterations, keyLength, function(err, hash) {
-		if(hash.toString('hex') !== pass) {
+	crypto.pbkdf2(password, this.salt, iterations, keyLength, function(err, hash) 
+	{
+		if(hash.toString('hex') !== pass) 
+		{
 			return callback(false);
 		}
 		return callback(true);
 	});
 };
 
-AccountSchema.statics.findByUsername = function(name, callback) {
+AccountSchema.statics.findByUsername = function(name, callback) 
+{
 
-    var search = {
+    var search = 
+	{
         username: name
     };
 
     return AccountModel.findOne(search, callback);
 };
 
-AccountSchema.statics.generateHash = function(password, callback) {
+AccountSchema.statics.generateHash = function(password, callback) 
+{
 	var salt = crypto.randomBytes(saltLength);
 	
-	crypto.pbkdf2(password, salt, iterations, keyLength, function(err, hash){
+	crypto.pbkdf2(password, salt, iterations, keyLength, function(err, hash)
+	{
 		return callback(salt, hash.toString('hex'));
 	});
 };
 
-AccountSchema.statics.authenticate = function(username, password, callback) {
-	return AccountModel.findByUsername(username, function(err, doc) {
+AccountSchema.statics.authenticate = function(username, password, callback) 
+{
+	return AccountModel.findByUsername(username, function(err, doc) 
+	{
 
 		if(err)
 		{
@@ -80,8 +91,10 @@ AccountSchema.statics.authenticate = function(username, password, callback) {
             return callback();
         }
 
-        doc.validatePassword(password, function(result) {
-            if(result === true) {
+        doc.validatePassword(password, function(result) 
+		{
+            if(result === true) 
+			{
                 return callback(null, doc);
             }
             

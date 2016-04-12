@@ -1,4 +1,5 @@
-html, body {
+html, body 
+{
     height: 100%;
     width: 100%;
     margin: 0;
@@ -6,7 +7,8 @@ html, body {
     overflow-x: hidden;
 }
 
-#logo {
+#logo 
+{
     height: 40px;
     width: 40;
     padding-top: 5px;
@@ -14,17 +16,20 @@ html, body {
     border-radius: 8px;
 }
 
-nav {
+nav 
+{
     width: 100%;
     height: 50px;
     background-color: #3eb64a;
 }
 
-nav:nth-child(1) {
+nav:nth-child(1) 
+{
     padding-left: 25px;
 }
 
-.navlink {
+.navlink 
+{
     padding: 5px;
     padding-top: 12px;
     padding-left: 20px;
@@ -33,7 +38,8 @@ nav:nth-child(1) {
     float: left;
 }
 
-.navlink a, .navlink a:link, .navlink a:visited, .navlink a:hover, .navlink a:active {
+.navlink a, .navlink a:link, .navlink a:visited, .navlink a:hover, .navlink a:active 
+{
     color: white;
     text-decoration: none;
     padding: 5px;
@@ -42,12 +48,14 @@ nav:nth-child(1) {
     transition: background-color 0.4s ease;
 }
 
-.navlink a:hover {
+.navlink a:hover 
+{
     transition: background-color 0.8s ease;
     background-color: #1c9428;
 }
 
-.miiForm {
+.miiForm 
+{
     border: 2px solid #1c9428;
     width: 950px;
     margin-top: 20px;
@@ -60,7 +68,8 @@ nav:nth-child(1) {
 
 
 
-.miiForm label {
+.miiForm label 
+{
     display: inline-block;
     width: 75px;
     margin-left: 10px;
@@ -96,7 +105,8 @@ nav:nth-child(1) {
 	text-align: center;
 }
 
-.makeMiiSubmit {
+.makeMiiSubmit 
+{
     transition: background-color 0.4s ease;
     display: block;
     font-size: 1.2em;
@@ -114,16 +124,19 @@ nav:nth-child(1) {
 	text-align: center;
 }
 
-.makeMiiSubmit:link, .makeMiiSubmit:visited, .makeMiiSubmit:hover, .makeMiiSubmit:active {
+.makeMiiSubmit:link, .makeMiiSubmit:visited, .makeMiiSubmit:hover, .makeMiiSubmit:active 
+{
     color: white;
 }
 
-.makeMiiSubmit:hover {
+.makeMiiSubmit:hover 
+{
     transition: background-color 0.4s ease;
     background-color: #1c9428;
 }
 
-.mainForm {
+.mainForm 
+{
     height: 300px;
     width: 350px;
     margin: 0 auto;
@@ -131,11 +144,13 @@ nav:nth-child(1) {
     font-size: 1.2em;
 }
 
-.mainForm h3 {
+.mainForm h3 
+{
     text-align: center;
 }
 
-.mainForm label {
+.mainForm label 
+{
     display: inline-block;
     width: 100px;
     margin-right: 10px;
@@ -143,7 +158,8 @@ nav:nth-child(1) {
     font-size: 1.2em;
 }
 
-.formSubmit {
+.formSubmit 
+{
     transition: background-color 0.4s ease;
     display: block;
     text-align: center;
@@ -158,28 +174,33 @@ nav:nth-child(1) {
     text-decoration: none;
 }
 
-.formSubmit:link, .formSubmit:visited, .formSubmit:hover, .formSubmit:active {
+.formSubmit:link, .formSubmit:visited, .formSubmit:hover, .formSubmit:active 
+{
     color: white;
 }
 
-.formSubmit:hover {
+.formSubmit:hover 
+{
     transition: background-color 0.4s ease;
     background-color: #1c9428;
 }
 
-#user, #pass, #pass2 {
+#user, #pass, #pass2 
+{
     text-align: center;
     font-size: 1.1em;
     width: 180px;
     border-radius: 6px;
 }
 
-#user:focus, #pass:focus, #pass2:focus {
+#user:focus, #pass:focus, #pass2:focus 
+{
     outline: none;
     box-shadow: 0px 0px 1px 1px #55acee;
 }
 
-#miiMessage {
+#miiMessage 
+{
     display:none;
     top: 250px;
     width: 350px;
@@ -190,27 +211,31 @@ nav:nth-child(1) {
     overflow: hidden;
 }
 
-#miiMessage h3 {
+#miiMessage h3 
+{
     width: 200px;
     position: absolute;
     top: 0px;
     left: 20px;
 }
 
-#speech {
+#speech 
+{
     height: 120px;
     width: 250px;
     z-index:300;
 }
 
-#errorMessage {
+#errorMessage 
+{
     font-size: 1.2em;
     font-weight: bold;
     color: red;
     font-style: italic;
 }
 
-#mii {
+#mii 
+{
     z-index: 225;
     margin-top: -20px;
     margin-left: 135px;
@@ -221,7 +246,8 @@ nav:nth-child(1) {
     transform: rotate(330deg);
 }
 
-#miis {
+#miis 
+{
     width: 40%;
     min-width: 400px;
     background-color: #3eb64a;
@@ -234,7 +260,8 @@ nav:nth-child(1) {
 	padding-top: 100px;
 }
 
-.mii {
+.mii 
+{
     width: 95%;
     margin: 0 auto;
     margin-top: 2px;
@@ -247,14 +274,16 @@ nav:nth-child(1) {
     overflow: hidden;
 }
 
-.mii:hover {
+.mii:hover 
+{
     transition: border-color 0.2s ease-out;
     border-color: rgba(255,255,255, 0.8);
     transition: background-color 2.6s ease-out;
     background-color: #66bfff;
 }
 
-img.miiFace {
+img.miiFace 
+{
     margin-left: 25px;
     margin-right: 10px;
     height: 50px;
@@ -283,7 +312,8 @@ h3.user
 	font-weight: bold;
 }
 
-h3.emptyMii {
+h3.emptyMii 
+{
     width: 400px;
     font-size: 1.5em;
     margin: 0 auto;
@@ -291,7 +321,8 @@ h3.emptyMii {
     margin-top: 18px;
 }
 
-h3.miiName {
+h3.miiName 
+{
     float:left;
     width: 200px;
     font-weight: bold;
@@ -301,7 +332,8 @@ h3.miiName {
 	clear: both;
 }
 
-h3.miiAge {
+h3.miiAge 
+{
     float:right;
     text-align: left;
     width: 100px;
@@ -311,10 +343,12 @@ h3.miiAge {
 	margin: 5px;
 }
 
-.mii:first-child {
+.mii:first-child 
+{
     margin-top: 10px;
 }
 
-.mii:last-child {
+.mii:last-child 
+{
     margin-bottom:10px;
 }

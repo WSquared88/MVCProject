@@ -8,7 +8,7 @@ var mongoose = require("mongoose");
 var session = require("express-session");
 var csrf = require("csurf");
 
-var dbURL = process.env.MONGOLAB_URI || "mongodb://localhost/DomoMaker";
+var dbURL = process.env.MONGODB_URI || "mongodb://localhost/DomoMaker";
 
 var db = mongoose.connect(dbURL, function(err)
 {

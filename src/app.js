@@ -42,8 +42,6 @@ app.use(session(
 	}
 }));
 
-console.log("about to start favicon");
-
 app.set("view engine", "jade");
 app.set("views", __dirname + "/views");
 app.use(favicon(__dirname + "/../client/img/favicon.png"));
@@ -60,8 +58,6 @@ app.use(function(err, req, res, next)
 	
 	return;
 });
-
-console.log("starting router");
 
 router(app);
 

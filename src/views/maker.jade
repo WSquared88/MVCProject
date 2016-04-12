@@ -23,8 +23,12 @@ block body
       input#miiColor(type="text", name="color", placeholder="Shirt Color")
       br
       label(for="face") Face:
-      input#miiFace(type="radio", name="face", value="1")
-      input#miiFace(type="radio", name="face", value="2")
+      .face
+        input#miiFace(type="radio", name="face", value="1")
+        img(class="miiFace", src="/assets/img/miiface1.jpg", alt="mii face")
+      .face
+        input#miiFace(type="radio", name="face", value="2")
+        img(class="miiFace", src="/assets/img/miiface2.jpg", alt="mii face")
       br
       input(type="hidden", name="_csrf", value="#{csrfToken}")
       a#makeMiiSubmit(class="makeMiiSubmit", href="#") Make Mii

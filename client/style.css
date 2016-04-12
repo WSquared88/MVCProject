@@ -75,6 +75,27 @@ nav:nth-child(1) {
 	margin: 2px;
 }
 
+.face
+{
+	display: inline-block
+	width: 20%;
+	height: 100px;
+	text-align: center;
+}
+
+.face input[type=radio]
+{
+	margin: auto;
+	display: inline-block;
+}
+
+.face img
+{
+	display: inline;
+	margin: auto;
+	
+}
+
 .makeMiiSubmit {
     transition: background-color 0.4s ease;
     display: block;
@@ -237,6 +258,11 @@ img.miiFace {
     border-radius: 4px;
     margin-top:10px;
     float:left;
+}
+
+#name
+{
+	font-family: "Open Sans", serif
 }
 
 h3.emptyMii {

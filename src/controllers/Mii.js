@@ -78,7 +78,8 @@ var viewPage = function(req, res)
 		res.render("app", 
 		{
 			csrfToken: req.csrfToken(),
-			miis: docs
+			miis: docs,
+			user: req.session.account.username
 		});
 	});
 };

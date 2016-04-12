@@ -1,6 +1,7 @@
 extends ./base.jade
 block append style
     link(rel="stylesheet", type="text/css", href="/assets/style.css")
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css')
 block body
   nav
     a(href="/login")
@@ -11,6 +12,11 @@ block body
       a(href="/maker") Make a Mii
     .navlink
       a(href="/viewAll") Miiverse
+  section#welcome
+    h2 Greetings 
+      span#name #{user}!
+    script.
+      - console.log(!{JSON.stringify(user)})
   section#miis
     if !miis || miis.length == 0
         div.mii

@@ -15,8 +15,6 @@ block body
   section#welcome
     h2 Greetings 
       span#name #{user}!
-    script.
-      - console.log(!{JSON.stringify(user)})
   section#miis
     if !miis || miis.length == 0
         div.mii

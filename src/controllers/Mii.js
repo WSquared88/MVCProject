@@ -29,7 +29,7 @@ var makeMii = function(req, res)
 	{
 		return res.status(400).json(
 		{
-			error: "Name, age, and color are required"
+			error: "Name, age, color, and face are required"
 		});
 	}
 	
@@ -38,6 +38,7 @@ var makeMii = function(req, res)
 		name: req.body.name,
 		age: req.body.age,
 		color: req.body.color,
+		face: req.body.face,
 		owner: req.session.account._id
 	};
 	

@@ -18,7 +18,7 @@ block body
     else
         each val in miis
             div(style={background: val.color}).mii
-                img(class="miiFace", src="/assets/img/miiface.jpeg", alt="mii face")
+                img(class="miiFace", src="/assets/img/miiface" + val.face + ".jpg", alt="mii face")
                 h3.miiName Name: #{val.name}
                 h3.miiAge Age: #{val.age}
   #miiMessage

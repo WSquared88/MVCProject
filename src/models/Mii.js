@@ -30,6 +30,13 @@ var MiiSchema = new mongoose.Schema(
 		trim: false,
 	},
 	
+	face:
+	{
+		type: Number,
+		required: true,
+		min: 0
+	},
+	
 	owner:
 	{
 		type: mongoose.Schema.ObjectId,
@@ -49,7 +56,8 @@ MiiSchema.methods.toAPI = function()
 	return {
 		name: this.name,
 		age: this.age,
-		color: this.color
+		color: this.color,
+		face: this.face
 	};
 };
 
@@ -60,12 +68,12 @@ MiiSchema.statics.findByOwner = function(ownerId, callback)
 		owner: mongoose.Types.ObjectId(ownerId)
 	};
 	
-	return MiiModel.find(search).select("name age color").exec(callback);
+	return MiiModel.find(search).select("name age color face").exec(callback);
 };
 
 MiiSchema.statics.findAll = function(ownerId, callback)
 {	
-	return MiiModel.find().select("name age color").exec(callback);
+	return MiiModel.find().select("name age color face").exec(callback);
 };
 
 MiiModel = mongoose.model("Mii", MiiSchema);

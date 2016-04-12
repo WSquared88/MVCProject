@@ -39,7 +39,8 @@ var makeMii = function(req, res)
 		age: req.body.age,
 		color: req.body.color,
 		face: req.body.face,
-		owner: req.session.account._id
+		owner: req.session.account._id,
+		ownerUsername: req.session.account.username
 	};
 	
 	var newMii = new Mii.MiiModel(miiData);

@@ -44,6 +44,12 @@ var MiiSchema = new mongoose.Schema(
 		ref: "Account"
 	},
 	
+	ownerUsername:
+	{
+		type: String,
+		required: true,
+	},
+	
 	createdData:
 	{
 		type: Date,
@@ -73,7 +79,7 @@ MiiSchema.statics.findByOwner = function(ownerId, callback)
 
 MiiSchema.statics.findAll = function(ownerId, callback)
 {	
-	return MiiModel.find().select("name age color face").exec(callback);
+	return MiiModel.find().select("name age color face ownerUsername").exec(callback);
 };
 
 MiiModel = mongoose.model("Mii", MiiSchema);

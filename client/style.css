@@ -265,6 +265,15 @@ img.miiFace {
 	font-family: "Open Sans", serif
 }
 
+h3.user
+{
+	margin: 5px;
+	font-size: 1.5em;
+	padding-left: 35px;
+	float: left;
+	font-weight: bold;
+}
+
 h3.emptyMii {
     width: 400px;
     font-size: 1.5em;
@@ -277,8 +286,10 @@ h3.miiName {
     float:left;
     width: 200px;
     font-weight: bold;
-    padding-left: 65px;
+    padding-left: 120px;
     font-size: 1.5em;
+	margin: 5px;
+	clear: both;
 }
 
 h3.miiAge {
@@ -288,6 +299,7 @@ h3.miiAge {
     font-weight: bold;
     padding-right: 40px;
     font-size: 1.5em;
+	margin: 5px;
 }
 
 .mii:first-child {

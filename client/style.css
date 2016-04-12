@@ -44,7 +44,7 @@ nav:nth-child(1) {
 
 .navlink a:hover {
     transition: background-color 0.8s ease;
-    background-color: #66bdff;
+    background-color: #1c9428;
 }
 
 .miiForm {
@@ -77,8 +77,8 @@ nav:nth-child(1) {
 
 .face
 {
-	display: inline-block
-	width: 20%;
+	display: inline-block;
+	width: 10%;
 	height: 100px;
 	text-align: center;
 }
@@ -86,14 +86,14 @@ nav:nth-child(1) {
 .face input[type=radio]
 {
 	margin: auto;
-	display: inline-block;
+	display: block;
 }
 
 .face img
 {
 	display: inline;
 	margin: auto;
-	
+	text-align: center;
 }
 
 .makeMiiSubmit {
@@ -101,7 +101,7 @@ nav:nth-child(1) {
     display: block;
     font-size: 1.2em;
     width: 90px;
-    background-color: #55acee;
+    background-color: #3eb64a;
     border-radius: 2px;
     padding: 3px 0px;
     color: black;
@@ -120,7 +120,7 @@ nav:nth-child(1) {
 
 .makeMiiSubmit:hover {
     transition: background-color 0.4s ease;
-    background-color: #338acc;
+    background-color: #1c9428;
 }
 
 .mainForm {
@@ -151,7 +151,7 @@ nav:nth-child(1) {
     margin-top: 14px;
     font-size: 1.2em;
     width: 90px;
-    background-color: #55acee;
+    background-color: #3eb64a;
     border-radius: 2px;
     padding: 3px 0px;
     color: black;
@@ -164,7 +164,7 @@ nav:nth-child(1) {
 
 .formSubmit:hover {
     transition: background-color 0.4s ease;
-    background-color: #338acc;
+    background-color: #1c9428;
 }
 
 #user, #pass, #pass2 {
